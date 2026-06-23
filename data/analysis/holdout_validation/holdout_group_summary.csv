@@ -1,0 +1,8 @@
+field_group,pilot_development,holdout_new_corpus
+Bibliographic,0.78,0.7
+Task/dataset,0.815,0.625
+Access,0.85,0.875
+Temporal horizon,0.835,0.688
+Temporal frequency,0.77,0.65
+Graph/nodes,0.845,0.762
+Overall_18field,0.821,0.708
