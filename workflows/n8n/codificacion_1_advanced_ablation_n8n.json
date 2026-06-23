@@ -1,0 +1,163 @@
+{
+  "name": "Codificacion 1 - Advanced ablations",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual-trigger",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [180, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\run_advanced_codificacion_workflows.py --workflow w5_evidence_required --pilot --model qwen2.5-coder:7b --timeout 300"
+      },
+      "id": "run-w5",
+      "name": "Run w5 evidence",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [420, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\evaluate_codificacion_1.py --pred data\\model_outputs\\codificacion_1_ollama\\w5_evidence_required\\codificacion_1_ollama.csv --out data\\model_outputs\\codificacion_1_ollama\\w5_evidence_required\\evaluation_report.csv"
+      },
+      "id": "eval-w5",
+      "name": "Evaluate w5",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [660, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\run_advanced_codificacion_workflows.py --workflow w6_second_pass_audit --pilot --model qwen2.5-coder:7b --timeout 300"
+      },
+      "id": "run-w6",
+      "name": "Run w6 audit",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\evaluate_codificacion_1.py --pred data\\model_outputs\\codificacion_1_ollama\\w6_second_pass_audit\\codificacion_1_ollama.csv --out data\\model_outputs\\codificacion_1_ollama\\w6_second_pass_audit\\evaluation_report.csv"
+      },
+      "id": "eval-w6",
+      "name": "Evaluate w6",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1140, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\run_advanced_codificacion_workflows.py --workflow w7_retrieval_tables --pilot --model qwen2.5-coder:7b --timeout 300"
+      },
+      "id": "run-w7",
+      "name": "Run w7 retrieval",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1380, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\evaluate_codificacion_1.py --pred data\\model_outputs\\codificacion_1_ollama\\w7_retrieval_tables\\codificacion_1_ollama.csv --out data\\model_outputs\\codificacion_1_ollama\\w7_retrieval_tables\\evaluation_report.csv"
+      },
+      "id": "eval-w7",
+      "name": "Evaluate w7",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1620, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\run_advanced_codificacion_workflows.py --workflow w8_self_consistency --pilot --model qwen2.5-coder:7b --samples 3 --timeout 300"
+      },
+      "id": "run-w8",
+      "name": "Run w8 consistency",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1860, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\evaluate_codificacion_1.py --pred data\\model_outputs\\codificacion_1_ollama\\w8_self_consistency\\codificacion_1_ollama.csv --out data\\model_outputs\\codificacion_1_ollama\\w8_self_consistency\\evaluation_report.csv"
+      },
+      "id": "eval-w8",
+      "name": "Evaluate w8",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [2100, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\run_advanced_codificacion_workflows.py --workflow w7_retrieval_tables --run-name w7_retrieval_tables_qwen3_coder --pilot --model qwen3-coder:30b --timeout 300"
+      },
+      "id": "run-w7-30b",
+      "name": "Run w7 qwen3 coder",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [2340, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\evaluate_codificacion_1.py --pred data\\model_outputs\\codificacion_1_ollama\\w7_retrieval_tables_qwen3_coder\\codificacion_1_ollama.csv --out data\\model_outputs\\codificacion_1_ollama\\w7_retrieval_tables_qwen3_coder\\evaluation_report.csv"
+      },
+      "id": "eval-w7-30b",
+      "name": "Evaluate w7 qwen3",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [2580, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\run_advanced_codificacion_workflows.py --workflow w9_multi_model_panel --run-name w9_multi_model_panel --panel-workflow w4_hybrid_w2_w3 --panel-workflow w7_retrieval_tables --panel-workflow w7_retrieval_tables_qwen3_coder"
+      },
+      "id": "run-w9",
+      "name": "Build w9 panel",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [2820, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\evaluate_codificacion_1.py --pred data\\model_outputs\\codificacion_1_ollama\\w9_multi_model_panel\\codificacion_1_ollama.csv --out data\\model_outputs\\codificacion_1_ollama\\w9_multi_model_panel\\evaluation_report.csv"
+      },
+      "id": "eval-w9",
+      "name": "Evaluate w9",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [3060, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\compare_codificacion_workflows.py"
+      },
+      "id": "compare",
+      "name": "Compare all",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [3300, 300]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {"main": [[{"node": "Run w5 evidence", "type": "main", "index": 0}]]},
+    "Run w5 evidence": {"main": [[{"node": "Evaluate w5", "type": "main", "index": 0}]]},
+    "Evaluate w5": {"main": [[{"node": "Run w6 audit", "type": "main", "index": 0}]]},
+    "Run w6 audit": {"main": [[{"node": "Evaluate w6", "type": "main", "index": 0}]]},
+    "Evaluate w6": {"main": [[{"node": "Run w7 retrieval", "type": "main", "index": 0}]]},
+    "Run w7 retrieval": {"main": [[{"node": "Evaluate w7", "type": "main", "index": 0}]]},
+    "Evaluate w7": {"main": [[{"node": "Run w8 consistency", "type": "main", "index": 0}]]},
+    "Run w8 consistency": {"main": [[{"node": "Evaluate w8", "type": "main", "index": 0}]]},
+    "Evaluate w8": {"main": [[{"node": "Run w7 qwen3 coder", "type": "main", "index": 0}]]},
+    "Run w7 qwen3 coder": {"main": [[{"node": "Evaluate w7 qwen3", "type": "main", "index": 0}]]},
+    "Evaluate w7 qwen3": {"main": [[{"node": "Build w9 panel", "type": "main", "index": 0}]]},
+    "Build w9 panel": {"main": [[{"node": "Evaluate w9", "type": "main", "index": 0}]]},
+    "Evaluate w9": {"main": [[{"node": "Compare all", "type": "main", "index": 0}]]}
+  },
+  "settings": {"executionOrder": "v1"},
+  "pinData": {},
+  "versionId": "codificacion-1-advanced-ablation-v1",
+  "triggerCount": 0,
+  "tags": []
+}

@@ -1,0 +1,9 @@
+order,workflow,display_label,model_or_source,accuracy_20_fields,accuracy_18_objective
+1,metadata_prior_baseline,Rules-only metadata/prior baseline,rules only,0.409,0.412
+2,w0_direct_50,Direct local LLM prompt,qwen2.5-coder:7b,0.462,0.451
+4,w2_schema_normalized_50,Schema + output normalization,qwen2.5-coder:7b,0.574,0.568
+5,w3_field_groups_50,Grouped field extraction,qwen2.5-coder:7b,0.602,0.610
+6,w4_hybrid_w2_w3_50,Field-family hybrid,qwen2.5-coder:7b,0.637,0.638
+12,w10_guideline_fewshot_qwen3_coder,Guided stronger local model,qwen3-coder:30b,0.796,0.813
+14,w10_schema_v4_access,Structured baseline + access rules,qwen3-coder:30b,0.803,0.821
+15,w16_temporal_audit_qwen3_coder,Second-pass temporal LLM audit,qwen3-coder:30b,0.803,0.821

@@ -1,0 +1,145 @@
+{
+  "name": "Codificacion 1 - Ollama hybrid pilot",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual-trigger",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        220,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\run_codificacion_1_ollama.py --pilot --model qwen2.5-coder:7b --workflow w2_schema_normalized"
+      },
+      "id": "run-w2",
+      "name": "Run w2 schema normalized",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        480,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\run_codificacion_1_ollama.py --pilot --model qwen2.5-coder:7b --workflow w3_field_groups"
+      },
+      "id": "run-w3",
+      "name": "Run w3 field groups",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        740,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\build_hybrid_codificacion_workflow.py"
+      },
+      "id": "build-hybrid",
+      "name": "Build w4 hybrid",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\evaluate_codificacion_1.py --pred data\\model_outputs\\codificacion_1_ollama\\w4_hybrid_w2_w3\\codificacion_1_ollama.csv --out data\\model_outputs\\codificacion_1_ollama\\w4_hybrid_w2_w3\\evaluation_report.csv"
+      },
+      "id": "evaluate-hybrid",
+      "name": "Evaluate w4 hybrid",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\compare_codificacion_workflows.py"
+      },
+      "id": "compare-workflows",
+      "name": "Compare workflows",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Run w2 schema normalized",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run w2 schema normalized": {
+      "main": [
+        [
+          {
+            "node": "Run w3 field groups",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run w3 field groups": {
+      "main": [
+        [
+          {
+            "node": "Build w4 hybrid",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build w4 hybrid": {
+      "main": [
+        [
+          {
+            "node": "Evaluate w4 hybrid",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Evaluate w4 hybrid": {
+      "main": [
+        [
+          {
+            "node": "Compare workflows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "versionId": "codificacion-1-ollama-hybrid-pilot-v1",
+  "triggerCount": 0,
+  "tags": []
+}

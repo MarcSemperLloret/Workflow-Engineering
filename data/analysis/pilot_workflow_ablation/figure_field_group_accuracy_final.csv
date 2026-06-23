@@ -1,0 +1,7 @@
+order,workflow,field_group,correct,total,errors,accuracy
+1,w10_schema_v4_access,temporal_horizon,167,200,33,0.835
+2,w10_schema_v4_access,temporal_frequency,77,100,23,0.770
+3,w10_schema_v4_access,access,85,100,15,0.850
+4,w10_schema_v4_access,graph_nodes,169,200,31,0.845
+5,w10_schema_v4_access,task_dataset,163,200,37,0.815
+6,w10_schema_v4_access,bibliographic,78,100,22,0.780

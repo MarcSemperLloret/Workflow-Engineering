@@ -1,0 +1,5 @@
+model,raw_workflow,access_workflow,covered_papers_raw,covered_papers_access,accuracy_18_raw,accuracy_18_access,access_delta_18,accuracy_20_raw,accuracy_20_access
+qwen3-coder:30b,w10_guideline_fewshot_qwen3_coder,w10_schema_v4_access,50,50,0.813,0.821,0.008,0.796,0.803
+gemma3:12b,w10_guideline_fewshot_gemma3_12b,w10_schema_v4_access_gemma3_12b,50,50,0.672,0.674,0.002,0.667,0.669
+mistral-nemo:12b,w10_guideline_fewshot_mistral_nemo_12b,w10_schema_v4_access_mistral_nemo_12b,50,50,0.588,0.601,0.013,0.593,0.605
+llama3.1:8b,w10_guideline_fewshot_llama3_1_8b,w10_schema_v4_access_llama3_1_8b,50,50,0.677,0.686,0.009,0.675,0.683

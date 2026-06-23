@@ -1,0 +1,51 @@
+paper_id,year,venue_type,domain_class,task_class,target_class,dataset_family,has_public_code,has_public_dataset,horizon_type,horizon_min_value,horizon_max_value,horizon_unit,frequency_value,frequency_unit,graph_node_count_min,graph_node_count_max,node_unit,graph_node_count_status,coding_status,confidence
+DCRNN,2018,conference,traffic,traffic_forecasting,traffic_speed,metr_la|pems_bay,yes,yes,multi_horizon,15,60,minutes,5,minutes,207,325,sensors,found,complete,high
+STGCN,2018,conference,traffic,traffic_forecasting,traffic_speed,bjer4|pemsd7,not_reported,yes,multi_horizon,15,45,minutes,5,minutes,12,1026,sensors,found,complete,high
+Graph WaveNet,2019,conference,traffic,traffic_forecasting,traffic_speed,metr_la|pems_bay,yes,yes,multi_horizon,15,60,minutes,5,minutes,207,325,sensors,found,complete,high
+GP-DCRNN,2019,journal,traffic,traffic_forecasting,traffic_speed_and_flow,california_highway_pems,not_reported,yes,single_horizon,60,60,minutes,5,minutes,11160,11160,stations,found,complete,high
+GMAN,2019,conference,traffic,traffic_forecasting,traffic_speed_and_flow,xiamen|pems_bay,yes,yes,sequence,12,12,steps,5,minutes,95,325,sensors,found,complete,high
+STTN,2020,journal,traffic,traffic_forecasting,traffic_speed,pemsd7|pems_bay,no,yes,multi_horizon,15,60,minutes,5,minutes,228,325,sensors,found,complete,high
+TL-DCRNN,2020,journal,traffic,traffic_forecasting,traffic_speed,california_highway_pems,yes,yes,single_horizon,60,60,minutes,5,minutes,11160,11160,sensors,found,complete,high
+MTGNN,2020,conference,multivariate_timeseries,multivariate_timeseries_forecasting,multiple_targets,traffic|solar_energy|electricity|exchange_rate|metr_la|pems_bay,yes,yes,sequence,12,12,steps,dataset_specific,dataset_specific,8,862,mixed,found,complete,high
+H-STGCN,2020,conference,traffic,travel_time_forecasting,travel_time,amap_beijing,not_reported,no,single_horizon,60,60,minutes,5,minutes,715,2907,road_segments,found,complete,high
+AGCRN,2020,conference,traffic,traffic_forecasting,traffic_flow,pemsd4|pemsd8,yes,yes,sequence,12,12,steps,5,minutes,170,307,sensors,found,complete,high
+COVID-STGNN,2020,preprint,epidemiology,covid_forecasting,covid_cases,nyt_covid|google_mobility,not_reported,yes,single_horizon,1,1,days,1,days,20,20,counties,partial,partial,medium
+Dynamic DCRNN-WAN,2020,preprint,network_traffic,network_traffic_forecasting,network_bandwidth,not_reported,not_reported,no,multi_horizon,6,24,hours,1,hours,96,96,nodes,found,complete,high
+HighAir,2021,preprint,air_quality,air_quality_forecasting,aqi,yangtze_air_quality,yes,no,multi_horizon,1,12,hours,1,hours,10,10,stations,partial,partial,medium
+Radflow,2021,conference,general_network_timeseries,network_timeseries_prediction,multiple_targets,vevo_music|wiki_traffic|los_loop|sz_taxi,yes,yes,sequence,12,12,steps,dataset_specific,dataset_specific,156,366802,mixed,found,complete,high
+USTGCN,2021,preprint,traffic,traffic_forecasting,traffic_speed,pemsd7|pemsd4|pemsd8,yes,yes,multi_horizon,15,60,minutes,5,minutes,170,307,sensors,found,complete,high
+DGCRN,2021,journal,traffic,benchmark_evaluation,traffic_speed,metr_la|pems_bay|ne_bj,yes,yes,multi_horizon,15,60,minutes,5,minutes,207,500,sensors,found,complete,high
+CNFGNN,2021,conference,traffic,traffic_forecasting,traffic_speed,pems_bay|metr_la,not_reported,yes,sequence,12,12,steps,5,minutes,207,325,sensors,found,complete,high
+PV-GCLSTM,2021,journal,energy_pv,pv_power_forecasting,pv_power,swiss_pv_real|swiss_pv_synthetic,not_reported,no,single_horizon,6,6,hours,15,minutes,304,1000,stations,found,complete,high
+MC-STGCN,2021,journal,traffic,traffic_forecasting,traffic_speed_and_flow,tysons_corner|los_loop|pems_bay,not_reported,yes,multi_horizon,15,60,minutes,5,minutes,131,325,mixed,found,complete,high
+STJGCN,2021,journal,traffic,traffic_forecasting,traffic_speed_and_flow,pemsd3|pemsd4|pemsd7|pemsd8|seattle_loop,not_reported,yes,sequence,12,12,steps,5,minutes,170,883,sensors,found,complete,high
+STG-NCDE,2022,conference,traffic,traffic_forecasting,traffic_flow,pemsd3|pemsd4|pemsd7|pemsd8,not_reported,yes,sequence,12,12,steps,5,minutes,170,883,sensors,found,complete,medium
+HiSTGNN,2022,preprint,multivariate_timeseries,multivariate_timeseries_forecasting,multiple_targets,not_reported,yes,yes,dataset_specific,24,33,steps,1,hours,6,13,stations,found,partial,medium
+Deep Ensemble UQ,2022,preprint,traffic,traffic_forecasting,traffic_speed,metr_la,no,yes,multi_horizon,5,60,minutes,5,minutes,207,207,sensors,found,complete,high
+Adaptive GCN Framework,2022,preprint,multivariate_timeseries,multivariate_timeseries_forecasting,multiple_targets,electricity,no,yes,multi_horizon,24,336,steps,dataset_specific,mixed,7,321,nodes,partial,partial,medium
+CorrSTN,2022,preprint,traffic,traffic_forecasting,traffic_flow,pemsd7|pemsd8|hzme,yes,yes,sequence,12,12,steps,dataset_specific,mixed,80,883,mixed,found,partial,medium
+D2STGNN,2022,journal,traffic,traffic_forecasting,traffic_speed_and_flow,metr_la|pems_bay|pemsd4|pemsd8,yes,yes,sequence,12,12,steps,5,minutes,170,325,sensors,found,complete,high
+STEP,2022,conference,traffic,traffic_forecasting,traffic_speed_and_flow,metr_la|pems_bay|pemsd4,yes,yes,sequence,12,12,steps,5,minutes,207,325,sensors,found,complete,high
+LightTS,2022,preprint,multivariate_timeseries,multivariate_timeseries_forecasting,multiple_targets,traffic|solar_energy|electricity|exchange_rate,not_reported,yes,multi_horizon,96,720,steps,dataset_specific,mixed,7,862,nodes,partial,partial,medium
+STID,2022,conference,multivariate_timeseries,multivariate_timeseries_forecasting,multiple_targets,pemsd4|pemsd7|pemsd8|pems_bay|electricity,yes,yes,sequence,12,12,steps,dataset_specific,mixed,170,883,sensors,found,complete,high
+Wind-GNN-Transformers,2022,preprint,multivariate_timeseries,multivariate_timeseries_forecasting,multiple_targets,not_reported,yes,no,multi_horizon,1,24,steps,10,minutes,14,14,stations,found,partial,medium
+MegaCRN,2023,conference,traffic,traffic_forecasting,traffic_speed,metr_la|pems_bay,yes,yes,sequence,12,12,steps,5,minutes,207,1843,sensors,found,complete,medium
+ST-SSL,2024,conference,traffic,traffic_forecasting,traffic_flow,nyc_bike|nyc_taxi|bj_taxi,yes,yes,single_horizon,1,1,steps,dataset_specific,mixed,128,1024,nodes,found,complete,medium
+PDFormer,2024,conference,traffic,traffic_forecasting,traffic_flow,pemsd4|pemsd7|pemsd8|nyc_taxi|chibike|t_drive,yes,yes,dataset_specific,12,12,steps,dataset_specific,mixed,75,1024,sensors,found,complete,medium
+SimST,2023,preprint,traffic,traffic_forecasting,traffic_speed_and_flow,metr_la|pems_bay|pemsd4|pemsd7|pemsd8,not_reported,yes,sequence,12,12,steps,5,minutes,170,883,sensors,found,complete,medium
+KDD Wind Power,2022,competition_workshop,multivariate_timeseries,multivariate_timeseries_forecasting,multiple_targets,not_reported,yes,yes,dataset_specific,288,288,steps,10,minutes,134,134,nodes,found,partial,medium
+ASTGCRN,2023,preprint,traffic,traffic_forecasting,traffic_flow,pemsd3|pemsd4|pemsd7|pemsd8,not_reported,yes,dataset_specific,12,12,steps,dataset_specific,mixed,53,883,sensors,found,partial,medium
+STG-NRDE,2023,preprint,traffic,traffic_forecasting,traffic_flow,pemsd3|pemsd4|pemsd7|pemsd8,yes,yes,sequence,12,12,steps,5,minutes,170,883,sensors,found,complete,medium
+All Connected,2023,preprint,multivariate_timeseries,multivariate_timeseries_forecasting,multiple_targets,not_reported,not_reported,no,single_horizon,6,6,steps,10,minutes,14,14,stations,found,partial,medium
+ST-GCRN Air Quality,2025,preprint,air_quality,air_quality_forecasting,aqi,not_reported,no,no,multi_horizon,1,12,hours,1,hours,1024,1024,stations,partial,partial,medium
+GRAM-ODE,2023,journal,traffic,traffic_forecasting,multiple_targets,metr_la|pems_bay|pemsd3|pemsd4|pemsd7|pemsd8,yes,yes,sequence,12,12,steps,5,minutes,170,883,sensors,found,complete,high
+LargeST,2023,conference,traffic,benchmark_evaluation,traffic_flow,largest|california_pems,yes,yes,sequence,12,12,steps,5,minutes,716,8600,sensors,found,complete,high
+STG4Traffic,2024,preprint,traffic,benchmark_evaluation,traffic_speed_and_flow,metr_la|pems_bay|pemsd4|pemsd8,yes,yes,multi_horizon,15,60,minutes,5,minutes,170,325,sensors,found,complete,high
+STAEformer,2023,conference,traffic,traffic_forecasting,traffic_flow,metr_la|pems_bay|pemsd3|pemsd4|pemsd7|pemsd8,yes,yes,multi_horizon,3,12,steps,5,minutes,170,883,sensors,found,complete,high
+MSGNN,2023,preprint,epidemiology,covid_forecasting,covid_cases,us_county_state_covid19,not_reported,yes,multi_horizon,1,3,weeks,1,days,not_reported,not_reported,counties,partial,partial,medium
+ASeer,2024,conference,traffic,traffic_forecasting,traffic_flow,zhuzhou|baoding,yes,no,single_horizon,60,60,minutes,dataset_specific,dataset_specific,264,620,sensors,found,partial,medium
+DHSL,2023,preprint,traffic,traffic_forecasting,traffic_flow,pemsd3|pemsd4|pemsd7|pemsd8,not_reported,yes,sequence,12,12,steps,5,minutes,170,883,sensors,found,complete,medium
+STExplainer,2023,conference,traffic,traffic_forecasting,traffic_flow,pemsd4|pemsd7|pemsd8,yes,yes,sequence,12,12,steps,5,minutes,170,883,sensors,found,complete,medium
+STGNPP,2023,preprint,traffic,traffic_forecasting,multiple_targets,beijing|chengdu,not_reported,no,dataset_specific,6,6,hours,5,minutes,435,573,links,found,partial,medium
+AI-Truck,2024,preprint,traffic,traffic_forecasting,multiple_targets,chengdu_slag_truck,not_reported,no,single_horizon,30,60,minutes,30,minutes,255,255,nodes,partial,partial,medium
+COOL,2025,preprint,traffic,traffic_forecasting,traffic_speed_and_flow,metr_la|pems_bay|pemsd7|pemsd8,not_reported,yes,multi_horizon,3,12,steps,5,minutes,170,883,sensors,found,complete,high

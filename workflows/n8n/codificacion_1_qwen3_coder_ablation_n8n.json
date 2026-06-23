@@ -1,0 +1,97 @@
+{
+  "name": "Codificacion 1 - qwen3 coder ablations",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual-trigger",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [180, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\run_codificacion_1_ollama.py --pilot --model qwen3-coder:30b --workflow w0_direct --run-name w0_direct_qwen3_coder --timeout 300"
+      },
+      "id": "run-w0-30b",
+      "name": "Run w0 qwen3 coder",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [430, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\assemble_codificacion_output.py --workflow w0_direct_qwen3_coder && python scripts\\evaluate_codificacion_1.py --pred data\\model_outputs\\codificacion_1_ollama\\w0_direct_qwen3_coder\\codificacion_1_ollama.csv --out data\\model_outputs\\codificacion_1_ollama\\w0_direct_qwen3_coder\\evaluation_report.csv"
+      },
+      "id": "eval-w0-30b",
+      "name": "Evaluate w0 qwen3",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\run_advanced_codificacion_workflows.py --workflow w7_retrieval_tables --run-name w7_retrieval_tables_qwen3_coder --pilot --model qwen3-coder:30b --timeout 300"
+      },
+      "id": "run-w7-30b",
+      "name": "Run w7 qwen3 coder",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [930, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\evaluate_codificacion_1.py --pred data\\model_outputs\\codificacion_1_ollama\\w7_retrieval_tables_qwen3_coder\\codificacion_1_ollama.csv --out data\\model_outputs\\codificacion_1_ollama\\w7_retrieval_tables_qwen3_coder\\evaluation_report.csv"
+      },
+      "id": "eval-w7-30b",
+      "name": "Evaluate w7 qwen3",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1180, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\run_new_codificacion_workflows.py --workflow w10_guideline_fewshot --run-name w10_guideline_fewshot_qwen3_coder --pilot --model qwen3-coder:30b --timeout 300"
+      },
+      "id": "run-w10-30b",
+      "name": "Run w10 qwen3 coder",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1430, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\assemble_codificacion_output.py --workflow w10_guideline_fewshot_qwen3_coder && python scripts\\evaluate_codificacion_1.py --pred data\\model_outputs\\codificacion_1_ollama\\w10_guideline_fewshot_qwen3_coder\\codificacion_1_ollama.csv --out data\\model_outputs\\codificacion_1_ollama\\w10_guideline_fewshot_qwen3_coder\\evaluation_report.csv"
+      },
+      "id": "eval-w10-30b",
+      "name": "Evaluate w10 qwen3",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1680, 300]
+    },
+    {
+      "parameters": {
+        "command": "python scripts\\compare_codificacion_workflows.py"
+      },
+      "id": "compare",
+      "name": "Compare all",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1930, 300]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {"main": [[{"node": "Run w0 qwen3 coder", "type": "main", "index": 0}]]},
+    "Run w0 qwen3 coder": {"main": [[{"node": "Evaluate w0 qwen3", "type": "main", "index": 0}]]},
+    "Evaluate w0 qwen3": {"main": [[{"node": "Run w7 qwen3 coder", "type": "main", "index": 0}]]},
+    "Run w7 qwen3 coder": {"main": [[{"node": "Evaluate w7 qwen3", "type": "main", "index": 0}]]},
+    "Evaluate w7 qwen3": {"main": [[{"node": "Run w10 qwen3 coder", "type": "main", "index": 0}]]},
+    "Run w10 qwen3 coder": {"main": [[{"node": "Evaluate w10 qwen3", "type": "main", "index": 0}]]},
+    "Evaluate w10 qwen3": {"main": [[{"node": "Compare all", "type": "main", "index": 0}]]}
+  },
+  "settings": {"executionOrder": "v1"},
+  "pinData": {},
+  "versionId": "codificacion-1-qwen3-coder-ablation-v1",
+  "triggerCount": 0,
+  "tags": []
+}

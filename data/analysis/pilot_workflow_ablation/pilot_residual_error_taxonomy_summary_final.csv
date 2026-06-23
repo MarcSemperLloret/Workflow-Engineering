@@ -1,0 +1,7 @@
+error_category,errors,share_of_errors,fields
+temporal_setup_extraction,56,0.348,frequency_unit|frequency_value|horizon_max_value|horizon_min_value|horizon_type|horizon_unit
+graph_node_semantics,31,0.193,graph_node_count_max|graph_node_count_min|graph_node_count_status|node_unit
+task_target_schema_boundary,24,0.149,domain_class|target_class|task_class
+bibliographic_metadata,22,0.137,venue_type|year
+access_evidence,15,0.093,has_public_code|has_public_dataset
+dataset_family_recall_normalization,13,0.081,dataset_family

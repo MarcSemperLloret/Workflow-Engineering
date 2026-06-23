@@ -1,0 +1,7 @@
+model,direct,schema,field_groups,hybrid,guided,guided_access,cot,audit,best_workflow,best_accuracy,guided_access_minus_direct
+qwen2.5-coder:7b,0.451,0.568,0.610,0.638,0.586,0.594,0.733,0.613,cot,0.733,0.143
+qwen3-coder:30b,0.640,0.738,0.753,0.736,0.813,0.821,0.730,0.809,guided_access,0.821,0.181
+command-r:35b,0.536,0.673,0.587,0.664,0.637,0.651,0.553,0.669,schema,0.673,0.115
+gemma3:12b,0.496,0.657,0.643,0.630,0.672,0.674,0.623,0.673,guided_access,0.674,0.178
+mistral-nemo:12b,0.462,0.537,0.599,0.581,0.588,0.601,0.490,0.610,audit,0.610,0.139
+llama3.1:8b,0.560,0.599,0.600,0.594,0.677,0.686,0.529,0.680,guided_access,0.686,0.126
