@@ -1,0 +1,7 @@
+model,holdout_18field_acc
+qwen3-coder:30b,0.708
+llama3.3:70b,0.625
+gemma3:12b,0.569
+llama3.1:8b,0.544
+mistral-nemo:12b,0.528
+command-r:35b,0.417

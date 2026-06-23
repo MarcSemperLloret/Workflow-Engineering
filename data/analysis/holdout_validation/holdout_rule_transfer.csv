@@ -1,0 +1,4 @@
+config,holdout_18field_acc
+reported_system_W10,0.708
+plus_horizon_rules_W18,0.714
+plus_frequency_rules_W19,0.714
