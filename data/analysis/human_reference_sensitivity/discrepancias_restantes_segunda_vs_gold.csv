@@ -1,0 +1,122 @@
+dataset,paper_id,field,second_human,gold
+piloto_50,STGCN,graph_node_count_min,228,12
+piloto_50,GP-DCRNN,venue_type,preprint,journal
+piloto_50,GP-DCRNN,node_unit,sensors,stations
+piloto_50,GMAN,year,2020,2019
+piloto_50,STTN,venue_type,preprint,journal
+piloto_50,STTN,has_public_code,not_reported,no
+piloto_50,TL-DCRNN,venue_type,preprint,journal
+piloto_50,MTGNN,dataset_family,metr_la|pems_bay|solar_energy|traffic|electricity|exchange_rate,traffic|solar_energy|electricity|exchange_rate|metr_la|pems_bay
+piloto_50,MTGNN,frequency_unit,mixed,dataset_specific
+piloto_50,COVID-STGNN,graph_node_count_status,found,partial
+piloto_50,Dynamic DCRNN-WAN,venue_type,competition_workshop,preprint
+piloto_50,Dynamic DCRNN-WAN,graph_node_count_min,12,96
+piloto_50,HighAir,has_public_dataset,yes,no
+piloto_50,HighAir,graph_node_count_max,56,10
+piloto_50,HighAir,graph_node_count_status,found,partial
+piloto_50,Radflow,frequency_unit,mixed,dataset_specific
+piloto_50,Radflow,graph_node_count_max,366145,366802
+piloto_50,USTGCN,venue_type,conference,preprint
+piloto_50,DGCRN,task_class,traffic_forecasting,benchmark_evaluation
+piloto_50,CNFGNN,dataset_family,metr_la|pems_bay,pems_bay|metr_la
+piloto_50,PV-GCLSTM,has_public_dataset,not_reported,no
+piloto_50,PV-GCLSTM,node_unit,nodes,stations
+piloto_50,MC-STGCN,venue_type,preprint,journal
+piloto_50,MC-STGCN,target_class,traffic_speed,traffic_speed_and_flow
+piloto_50,STJGCN,year,2022,2021
+piloto_50,Deep Ensemble UQ,has_public_code,not_reported,no
+piloto_50,Adaptive GCN Framework,venue_type,journal,preprint
+piloto_50,Adaptive GCN Framework,has_public_code,not_reported,no
+piloto_50,CorrSTN,venue_type,journal,preprint
+piloto_50,CorrSTN,target_class,multiple_targets,traffic_flow
+piloto_50,CorrSTN,frequency_value,5,dataset_specific
+piloto_50,CorrSTN,frequency_unit,minutes,mixed
+piloto_50,LightTS,has_public_code,yes,not_reported
+piloto_50,STID,dataset_family,pemsd3|pemsd4|pemsd7|pemsd8|pems_bay|electricity,pemsd4|pemsd7|pemsd8|pems_bay|electricity
+piloto_50,Wind-GNN-Transformers,has_public_dataset,yes,no
+piloto_50,ST-SSL,year,2023,2024
+piloto_50,ST-SSL,frequency_value,30,dataset_specific
+piloto_50,ST-SSL,frequency_unit,minutes,mixed
+piloto_50,ST-SSL,graph_node_count_status,partial,found
+piloto_50,PDFormer,year,2023,2024
+piloto_50,PDFormer,frequency_value,5,dataset_specific
+piloto_50,PDFormer,frequency_unit,minutes,mixed
+piloto_50,PDFormer,graph_node_count_min,170,75
+piloto_50,PDFormer,graph_node_count_max,883,1024
+piloto_50,SimST,target_class,traffic_flow,traffic_speed_and_flow
+piloto_50,KDD Wind Power,year,2023,2022
+piloto_50,ASTGCRN,frequency_value,5,dataset_specific
+piloto_50,ASTGCRN,frequency_unit,minutes,mixed
+piloto_50,ASTGCRN,graph_node_count_min,170,53
+piloto_50,STG-NRDE,venue_type,journal,preprint
+piloto_50,All Connected,has_public_dataset,yes,no
+piloto_50,All Connected,frequency_unit,mixed,minutes
+piloto_50,ST-GCRN Air Quality,year,2023,2025
+piloto_50,ST-GCRN Air Quality,has_public_code,not_reported,no
+piloto_50,ST-GCRN Air Quality,has_public_dataset,yes,no
+piloto_50,ST-GCRN Air Quality,graph_node_count_min,25,1024
+piloto_50,ST-GCRN Air Quality,graph_node_count_max,37,1024
+piloto_50,ST-GCRN Air Quality,graph_node_count_status,found,partial
+piloto_50,GRAM-ODE,target_class,traffic_speed_and_flow,multiple_targets
+piloto_50,GRAM-ODE,dataset_family,pemsd3|pemsd4|pemsd7|pemsd8|metr_la|pems_bay,metr_la|pems_bay|pemsd3|pemsd4|pemsd7|pemsd8
+piloto_50,STG4Traffic,year,2023,2024
+piloto_50,STAEformer,target_class,traffic_speed_and_flow,traffic_flow
+piloto_50,MSGNN,venue_type,journal,preprint
+piloto_50,MSGNN,dataset_family,jhu_csse_covid19,us_county_state_covid19
+piloto_50,MSGNN,graph_node_count_min,50,not_reported
+piloto_50,MSGNN,graph_node_count_max,3142,not_reported
+piloto_50,MSGNN,graph_node_count_status,found,partial
+piloto_50,ASeer,target_class,multiple_targets,traffic_flow
+piloto_50,ASeer,has_public_dataset,not_reported,no
+piloto_50,STExplainer,target_class,multiple_targets,traffic_flow
+piloto_50,STGNPP,dataset_family,beijing_amap|chengdu_amap,beijing|chengdu
+piloto_50,AI-Truck,target_class,traffic_flow,multiple_targets
+piloto_50,AI-Truck,graph_node_count_min,1199,255
+piloto_50,AI-Truck,graph_node_count_max,1199,255
+piloto_50,AI-Truck,graph_node_count_status,found,partial
+piloto_50,COOL,year,2024,2025
+holdout_20,WEST-GCN-LSTM-Weighted,dataset_family,berlin_cycling|central_park,central_park|berlin_bike
+holdout_20,WEST-GCN-LSTM-Weighted,graph_node_count_min,6,not_reported
+holdout_20,WEST-GCN-LSTM-Weighted,graph_node_count_max,6,not_reported
+holdout_20,WEST-GCN-LSTM-Weighted,graph_node_count_status,found,partial
+holdout_20,Robust-Traffic-Forecasting-against,target_class,traffic_flow,traffic_speed_and_flow
+holdout_20,Cross-Space-Time-Spatio,has_public_code,yes,not_reported
+holdout_20,Unveiling-Inflexibility-Adaptive-Embedding,target_class,traffic_speed_and_flow,traffic_flow
+holdout_20,Unveiling-Inflexibility-Adaptive-Embedding,dataset_family,metr_la|pems_bay|pemsd3|pemsd4|pemsd7|pemsd8,pemsd3|pemsd4|pemsd7|pemsd8
+holdout_20,Epidemiology-informed-Graph-Neural,year,2024,2025
+holdout_20,Epidemiology-informed-Graph-Neural,dataset_family,japan_prefectures|us_regions|us_states|australia_covid,japan_prefectures|us_regions_flu|us_states_flu|australia_covid
+holdout_20,Epidemiology-informed-Graph-Neural,frequency_value,7,dataset_specific
+holdout_20,Epidemiology-informed-Graph-Neural,frequency_unit,days,mixed
+holdout_20,Epidemiology-informed-Graph-Neural,graph_node_count_min,8,6
+holdout_20,Epidemiology-informed-Graph-Neural,node_unit,nodes,mixed
+holdout_20,Spatio-temporal-Causal-Learning,has_public_dataset,yes,not_reported
+holdout_20,Spatio-temporal-Causal-Learning,frequency_value,1,not_reported
+holdout_20,Spatio-temporal-Causal-Learning,frequency_unit,days,not_reported
+holdout_20,Sustainable-Greenhouse-Microclimate-Modeling,dataset_family,gh2_2020|gh4_2024,greenhouse_microclimate
+holdout_20,Forecasting-Multivariate-Urban-Data,dataset_family,electricity|weather|carbon_intensity|air_pollution,urban_multivariate
+holdout_20,Forecasting-Multivariate-Urban-Data,has_public_dataset,yes,not_reported
+holdout_20,Forecasting-Multivariate-Urban-Data,graph_node_count_min,7,21
+holdout_20,Forecasting-Multivariate-Urban-Data,node_unit,nodes,sensors
+holdout_20,Spatio-Temporal-Graph-Neural,task_class,multivariate_timeseries_forecasting,network_timeseries_prediction
+holdout_20,Spatio-Temporal-Graph-Neural,has_public_dataset,yes,not_reported
+holdout_20,Adaptive-Spatio-Temporal-Graphs,dataset_family,merra2|era5,era5|merra2
+holdout_20,Adaptive-Spatio-Temporal-Graphs,frequency_value,not_reported,6
+holdout_20,Adaptive-Spatio-Temporal-Graphs,frequency_unit,not_reported,hours
+holdout_20,FreeGNN-Continual-Source-Free,domain_class,multivariate_timeseries,energy_pv
+holdout_20,FreeGNN-Continual-Source-Free,task_class,multivariate_timeseries_forecasting,pv_power_forecasting
+holdout_20,FreeGNN-Continual-Source-Free,graph_node_count_min,1,2
+holdout_20,VN-Net-Vision-Numerical,venue_type,conference,preprint
+holdout_20,VN-Net-Vision-Numerical,graph_node_count_status,partial,found
+holdout_20,GinAR-End-To-End,venue_type,conference,preprint
+holdout_20,GinAR-End-To-End,frequency_value,5,dataset_specific
+holdout_20,GinAR-End-To-End,frequency_unit,minutes,mixed
+holdout_20,Bond-Graphs-multi-physics,dataset_family,dc_motor|respiratory_system_physionet,dc_motor|respiratory_system
+holdout_20,Bond-Graphs-multi-physics,frequency_value,not_reported,10
+holdout_20,Bond-Graphs-multi-physics,frequency_unit,not_reported,seconds
+holdout_20,Bond-Graphs-multi-physics,graph_node_count_min,3,not_reported
+holdout_20,Bond-Graphs-multi-physics,graph_node_count_max,4,not_reported
+holdout_20,Bond-Graphs-multi-physics,graph_node_count_status,found,partial
+holdout_20,SAGDFN-Scalable-Adaptive-Graph,venue_type,conference,preprint
+holdout_20,SAGDFN-Scalable-Adaptive-Graph,domain_class,multivariate_timeseries,traffic
+holdout_20,SAGDFN-Scalable-Adaptive-Graph,task_class,multivariate_timeseries_forecasting,traffic_forecasting
+holdout_20,SAGDFN-Scalable-Adaptive-Graph,dataset_family,metr_la|carpark1918|london2000|newyork2000,metr_la|london2000|newyork2000|carpark1918

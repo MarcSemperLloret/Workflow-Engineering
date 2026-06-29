@@ -1,4 +1,4 @@
-field_group,frontier_blind,frontier_closed_vocab,local_qwen3_coder_30b_guided
+field_group,hosted_blind,hosted_closed_vocab,local_qwen3_coder_30b_guided
 Bibliographic,0.790,0.790,0.780
 Task/dataset,0.625,0.825,0.815
 Access,0.860,0.860,0.850

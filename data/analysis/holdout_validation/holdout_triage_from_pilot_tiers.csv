@@ -1,0 +1,5 @@
+tier,fields,field_count,instances,coverage_excluding_diagnostics,correct,accuracy
+auto_accept,domain_class|has_public_dataset|horizon_max_value|horizon_unit,4,80,0.222,65,0.812
+review,frequency_unit|frequency_value|graph_node_count_max|graph_node_count_min|graph_node_count_status|has_public_code|horizon_min_value|node_unit|task_class|year,10,200,0.556,148,0.740
+human_required,dataset_family|horizon_type|target_class|venue_type,4,80,0.222,42,0.525
+excluded_diagnostic,coding_status|confidence,2,40,0.100,23,0.575

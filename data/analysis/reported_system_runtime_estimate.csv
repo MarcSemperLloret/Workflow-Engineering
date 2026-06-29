@@ -1,0 +1,2 @@
+run,model,workflow,n_papers,first_json,last_json,wall_clock_min,mean_wall_clock_s_per_paper,note
+reported_qwen3_guided_extraction_from_json_timestamps,qwen3-coder:30b,w10_guideline_fewshot,50,2026-06-06 23:11:26,2026-06-07 01:04:34,113.14,135.76,Derived from sequential JSON file modification timestamps; excludes deterministic access post-processing.

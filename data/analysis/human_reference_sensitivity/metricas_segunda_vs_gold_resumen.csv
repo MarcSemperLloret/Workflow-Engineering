@@ -1,0 +1,4 @@
+dataset,rows,all_fields_match,all_fields_total,all_fields_agreement,objective_match,objective_total,objective_agreement,remaining_discrepancies
+piloto_50,50,924,1000,0.924,824,900,0.9155555555555556,76
+holdout_20,20,355,400,0.8875,315,360,0.875,45
+combined_70,70,1279,1400,0.9135714285714286,1139,1260,0.903968253968254,121

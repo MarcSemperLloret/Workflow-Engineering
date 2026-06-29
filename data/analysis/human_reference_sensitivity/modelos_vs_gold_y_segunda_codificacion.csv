@@ -1,0 +1,16 @@
+corpus,workflow,gold_acc20,second_acc20,delta_acc20_second_minus_gold,gold_acc18_objective,second_acc18_objective,delta_acc18_second_minus_gold,gold_correct18,second_correct18,total18
+pilot,w10_schema_v4_access,0.803,0.807,0.004,0.821,0.826,0.004,739,743,900
+pilot,w18_horizon_rules_all_pilot,0.836,0.840,0.004,0.858,0.862,0.004,772,776,900
+pilot,w19_frequency_rules_conservative_pilot,0.855,0.845,-0.010,0.879,0.868,-0.011,791,781,900
+pilot,balanced__qwen3_coder_30b__schema,0.726,0.742,0.016,0.738,0.756,0.018,664,680,900
+pilot,balanced__qwen3_coder_30b__guided,0.796,0.806,0.010,0.813,0.824,0.011,732,742,900
+pilot,balanced__qwen3_coder_30b__hybrid,0.724,0.747,0.023,0.736,0.761,0.026,662,685,900
+holdout,holdout_w10_schema_v4_access,0.695,0.642,-0.052,0.708,0.650,-0.058,255,234,360
+holdout,holdout_w18_horizon_rules,0.700,0.647,-0.052,0.714,0.656,-0.058,257,236,360
+holdout,holdout_w19_frequency_rules_conservative,0.700,0.647,-0.052,0.714,0.656,-0.058,257,236,360
+holdout,holdout_w22_selective_consensus,0.728,0.690,-0.038,0.742,0.700,-0.042,267,252,360
+holdout,holdout_w23_normalized_temporal,0.743,0.688,-0.055,0.758,0.697,-0.061,273,251,360
+holdout,holdout_w23_normalized_temporal_v2,0.743,0.688,-0.055,0.758,0.697,-0.061,273,251,360
+holdout,holdout_gemma3_12b_w21_evidence_localized_access,0.600,0.593,-0.007,0.614,0.606,-0.008,221,218,360
+holdout,holdout_llama3_3_70b_w21_evidence_localized_access,0.657,0.657,0.000,0.667,0.667,0.000,240,240,360
+holdout,holdout_qwen3_coder_30b_w21_evidence_localized_access,0.695,0.700,0.005,0.711,0.717,0.006,256,258,360

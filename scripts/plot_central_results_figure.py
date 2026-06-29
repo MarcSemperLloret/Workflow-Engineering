@@ -4,8 +4,6 @@ from __future__ import annotations
 
 import csv
 from pathlib import Path
-from textwrap import fill
-
 import matplotlib.pyplot as plt
 
 
@@ -90,14 +88,12 @@ def main() -> int:
         }
     )
 
-    fig = plt.figure(figsize=(7.6, 7.5))
+    fig = plt.figure(figsize=(7.6, 8.2))
     gs = fig.add_gridspec(
-        2,
-        2,
-        height_ratios=[1.05, 0.95],
-        width_ratios=[1.05, 1.18],
-        hspace=0.58,
-        wspace=0.36,
+        3,
+        1,
+        height_ratios=[0.95, 1.20, 0.95],
+        hspace=0.92,
     )
 
     # Panel A: main Qwen-family ladder.
@@ -118,7 +114,7 @@ def main() -> int:
     ax_a.plot(x, acc18, color=BLUE, marker="o", linewidth=1.9, markersize=4.0)
     ax_a.scatter([6], [acc18[6]], s=48, color=GREEN, zorder=4)
     ax_a.axvline(4.5, color="#bbbbbb", linewidth=0.8, linestyle="--")
-    ax_a.text(4.55, 0.43, "model +\nprompt", fontsize=7, color=GRAY, va="bottom")
+    ax_a.text(4.55, 0.43, "model + prompt", fontsize=7, color=GRAY, va="bottom")
     for idx in [0, 1, 4, 6, 7]:
         ax_a.text(idx, acc18[idx] + 0.018, f"{acc18[idx]:.3f}", ha="center", fontsize=7)
     ax_a.set_ylim(0.36, 0.86)
@@ -130,7 +126,7 @@ def main() -> int:
     panel_label(ax_a, "A")
 
     # Panel B: balanced model x workflow experiment.
-    ax_b = fig.add_subplot(gs[0, 1])
+    ax_b = fig.add_subplot(gs[1, 0])
     workflows = ["direct", "schema", "field_groups", "hybrid", "guided", "guided_access", "cot", "audit"]
     balanced_rows = read_csv(BALANCED / "balanced_workflow_model_primary_wide.csv")
     colors = {
@@ -159,15 +155,15 @@ def main() -> int:
             values,
             color=colors[model],
             marker=markers[model],
-            linewidth=1.45,
-            markersize=3.8,
+            linewidth=1.35,
+            markersize=3.6,
             alpha=0.92,
             label=short_model_label(model),
         )
         ax_b.scatter(
             [best_idx],
             [values[best_idx]],
-            s=50,
+            s=44,
             facecolors="none",
             edgecolors=colors[model],
             linewidths=1.2,
@@ -177,56 +173,22 @@ def main() -> int:
     ax_b.set_xticks(bx)
     ax_b.set_xticklabels([workflow_label(w) for w in workflows], rotation=28, ha="right")
     ax_b.set_ylabel("18-field accuracy")
-    ax_b.set_title("Balanced model--workflow experiment", loc="left", fontsize=9)
+    ax_b.set_title("Balanced model--workflow experiment", loc="left", fontsize=9, pad=24)
     ax_b.legend(
         frameon=False,
-        ncol=2,
-        loc="upper left",
-        bbox_to_anchor=(0.02, 0.98),
+        ncol=3,
+        loc="lower center",
+        bbox_to_anchor=(0.5, 1.02),
         borderaxespad=0.0,
-        handlelength=1.7,
-        columnspacing=0.9,
+        handlelength=1.6,
+        columnspacing=1.3,
         fontsize=6.5,
     )
     despine(ax_b)
     panel_label(ax_b, "B")
 
-    # Panel C: field-group accuracy for reported system.
-    ax_c = fig.add_subplot(gs[1, 0])
-    group_rows = read_csv(PILOT / "figure_field_group_accuracy_final.csv")
-    group_order = [
-        "access",
-        "graph_nodes",
-        "temporal_horizon",
-        "task_dataset",
-        "bibliographic",
-        "temporal_frequency",
-    ]
-    group_labels = {
-        "access": "Access",
-        "graph_nodes": "Graph\nnodes",
-        "temporal_horizon": "Temporal\nhorizon",
-        "task_dataset": "Task /\ndataset",
-        "bibliographic": "Biblio.",
-        "temporal_frequency": "Temporal\nfrequency",
-    }
-    by_group = {row["field_group"]: float(row["accuracy"]) for row in group_rows}
-    gx = list(range(len(group_order)))
-    gvals = [by_group[group] for group in group_order]
-    gcolors = [GREEN if value >= 0.84 else BLUE if value >= 0.80 else ORANGE for value in gvals]
-    ax_c.bar(gx, gvals, color=gcolors, width=0.72)
-    for idx, value in enumerate(gvals):
-        ax_c.text(idx, value + 0.012, f"{value:.2f}", ha="center", fontsize=7)
-    ax_c.set_ylim(0.70, 0.88)
-    ax_c.set_xticks(gx)
-    ax_c.set_xticklabels([group_labels[group] for group in group_order])
-    ax_c.set_ylabel("Reported-system accuracy")
-    ax_c.set_title("Where the final system is reliable", loc="left", fontsize=9)
-    despine(ax_c)
-    panel_label(ax_c, "C")
-
-    # Panel D: residual error taxonomy.
-    ax_d = fig.add_subplot(gs[1, 1])
+    # Panel C: residual error taxonomy.
+    ax_d = fig.add_subplot(gs[2, 0])
     error_rows = read_csv(PILOT / "pilot_residual_error_taxonomy_summary_final.csv")
     error_labels = {
         "temporal_setup_extraction": "Temporal setup",
@@ -251,7 +213,7 @@ def main() -> int:
     despine(ax_d)
     ax_d.grid(axis="x", color="#dddddd", linewidth=0.55)
     ax_d.grid(axis="y", visible=False)
-    panel_label(ax_d, "D")
+    panel_label(ax_d, "C")
 
     FIGDIR.mkdir(parents=True, exist_ok=True)
     for ext in ("pdf", "png", "svg"):
